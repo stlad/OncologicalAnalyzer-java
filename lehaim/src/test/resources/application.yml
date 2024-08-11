@@ -3,9 +3,9 @@ spring:
     username: user
     password: passwd
     driver-class-name: org.h2.Driver
-    url: jdbc:h2:mem:testdb
+    url: jdbc:h2:mem:testdb;MODE=PostgreSQL;NON_KEYWORDS=VALUE;DATABASE_TO_UPPER=FALSE
   liquibase:
-    change-log: classpath:db/changelog/db.changelog-test.xml
+    change-log: classpath:db.changelog/db.changelog-test.xml
     contexts: test
   jpa:
     show-sql: true
